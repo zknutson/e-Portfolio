@@ -3,12 +3,49 @@
 
 @import "main.scss";
 
+:root {
+    --background-offset: 5%;
+    --bulma-primary-h: 26deg;
+    --bulma-primary-l: 53%;
+}
+
+hr {
+    background-color: white;
+}
+.is-light {
+    background-color: hsl(var(--bulma-scheme-h),var(--bulma-scheme-s),calc(var(--bulma-scheme-main-l) + var(--background-offset)));
+}
+
+.is-lighter {
+    background-color: hsl(var(--bulma-scheme-h),var(--bulma-scheme-s),calc(var(--bulma-scheme-main-l) + calc(var(--background-offset) * 2)));
+}
+
+.is-lightest {
+    background-color: hsl(var(--bulma-scheme-h),var(--bulma-scheme-s),calc(var(--bulma-scheme-main-l) + calc(var(--background-offset) * 3)));
+}
+
+.is-dark {
+    background-color: hsl(var(--bulma-scheme-h),var(--bulma-scheme-s),calc(var(--bulma-scheme-main-l) - var(--background-offset)));
+}
+
+.is-darker {
+    background-color: hsl(var(--bulma-scheme-h),var(--bulma-scheme-s),calc(var(--bulma-scheme-main-l) - calc(var(--background-offset) * 2)));
+}
+
+.is-darkest {
+    background-color: hsl(var(--bulma-scheme-h),var(--bulma-scheme-s),calc(var(--bulma-scheme-main-l) - calc(var(--background-offset) * 3)));
+}
+
 #navbar {
     opacity: 0.95;
 }
 
 .is-active {
     font-weight: 600;
+}
+
+.navbar-item {
+    transition: none;
 }
 
 .navbar-dropdown {
@@ -40,9 +77,9 @@ a.navbar-item.is-active {
 
 #hero {
     background: rgb(0, 0, 0);
-    background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.75) 100%);
-    background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.75) 100%);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.75) 100%);
+    background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.0) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.0) 100%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=1);
 
     &::before {
@@ -65,7 +102,10 @@ a.navbar-item.is-active {
     margin: auto 0.75rem!important;
 }
 .subtitle {
-    letter-spacing: 0.25rem;
+    b {
+        font-weight: 600;
+        color: var(--bulma-primary-light);
+    }
 }
 
 #about {
@@ -74,7 +114,7 @@ a.navbar-item.is-active {
         margin: auto;
 
         img {
-            border: 0.25rem dotted black;
+            border: 0.25rem dotted;
         }
     }
 
@@ -83,7 +123,14 @@ a.navbar-item.is-active {
         margin: 0.5rem;
     }
 }
-
+#research {
+    .card {
+        transition: all 0.25s ease;
+        &:hover {
+            transform: scale(1.03);
+        }
+    }
+}
 #contact {
     #contact-button {
         margin: 0.5rem auto;
@@ -225,8 +272,7 @@ a.navbar-item.is-active {
             }
 
             a {
-                color: #7a7a7a;
-
+                --bulma-link-text: var(--bulma-text);
                 &:hover {
                     color: white;
                 }

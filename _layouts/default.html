@@ -3,13 +3,14 @@ layout: compress
 ---
 
 <!DOCTYPE html>
-<html>
+<html class="theme-dark">
 {% include head.html %}
 
 <body>
   {% include navbar.html %}
   {% include showcase.html %}
   {% include about.html %}
+  {% include research.html %}
   {% include contact.html %}
   <!--Footer begins here-->
   {% include footer.html %}
@@ -17,11 +18,10 @@ layout: compress
 <script>
   var navItems = document.getElementsByClassName('navbar-item');
   var heroes = document.getElementsByClassName('hero');
-  const viewOffset = 200; 
+  const viewOffset = window.innerHeight * 0.6;
 
   window.addEventListener("scroll", function (event) {
     var scroll = this.scrollY;
-    var position = window.pageYOffset;
 
     for (var i = 0; i < navItems.length; i++) {
       navItems[i].classList.remove('is-active');

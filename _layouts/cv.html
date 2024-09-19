@@ -1,0 +1,36 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html class="theme-dark">
+{% include head.html %}
+<body>
+    {% include navbar.html %}
+    <section class="hero is-fullheight has-text-centered">
+        <div class="hero-body">
+            <div class="container has-text-centered" id="page-section">
+                <div class="section">
+                    <h1 class="title is-1 is-uppercase has-text-weight-bold">
+                        Explore my <em>Curriculum Vitae</em>
+                    </h1>
+                    <p class="mb-2">or</p>
+                    <a href="{{site.cv-pdf}}" class="button is-3 is-uppercase is-outlined is-primary" download>
+                        download a pdf copy
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hero is-fullheight has-text-centered">
+        <div class="hero-body">
+            <div class="content has-text-centered">
+                {{ content }}
+            </div>
+        </div>
+    </section>
+    {% include contact.html %}
+    <!--Footer begins here-->
+    {% include footer.html %}
+</body>
+</html>
