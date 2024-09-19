@@ -10,29 +10,34 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque.
                 </p>
             </div>
-            <div class="columns">
+            <div class="columns is-centered is-multiline">
                 {% for card in site.research %}
-                <div class="column">
-                    <div class="card">
-                        <a href="{{ card.url | absolute_url}}">
-                            <div class="card-image">
-                                <figure class="image">
-                                    <img src="{{ card.image }}" alt="{{ card.title }}">
-                                </figure>
-                            </div>
-                            <div class="card-content">
-                                <div class="media">
-                                    <div class="media-content">
-                                        <p class="title is-4">{{ card.title }}</p>
-                                        <p class="subtitle is-6">{{ card.description }}</p>
+                    {% if card.highlight %}
+                    <div class="column is-two-thirds-tablet is-half-desktop">
+                        <div class="card">
+                            <a href="{{ card.url | absolute_url}}">
+                                <div class="card-image">
+                                    <figure class="image">
+                                        <img src="{{ card.image }}" alt="{{ card.title }}">
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <div class="media">
+                                        <div class="media-content">
+                                            <p class="title is-4">{{ card.title }}</p>
+                                            <p class="subtitle is-6">{{ card.description }}</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
-                </div>
+                    {% endif %}
                 {% endfor %}
             </div>
+            <a href="{{site.url}}{{site.baseurl}}/projects" class="button is-primary is-uppercase is-outlined">
+                See All of my Projects
+            </a>
         </div>
     </div>
 

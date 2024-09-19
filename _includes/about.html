@@ -7,8 +7,10 @@
                         <img class="is-rounded" src="{{site.author-image}}" alt="{{site.author-name}}">
                     </figure>
                 </div>
-                <div class="column has-text-left-desktop has-text-left-tablet has-text-left-fullhd has-text-left-widescreen">
-                    <p>{{site.author-about}}</p>
+                <div class="column has-text-left-desktop has-text-left-tablet has-text-left-fullhd has-text-left-widescreen ">
+                    <div class="is-size-5">
+                        {{ page.author-about | markdownify }}
+                    </div>
                     <br>
                     <div class="container columns is-centered">
                         <div>
@@ -18,8 +20,8 @@
                             </a>
                         </div>
                         <div>
-                            <a href="{{site.url}}{{site.baseurl}}/blog"
-                                class="button is-primary is-rounded is-uppercase has-text-weight-normal is-outlined">Blog</a>
+                            <a href="{{site.url}}{{site.baseurl}}/projects"
+                                class="button is-primary is-rounded is-uppercase has-text-weight-normal is-outlined">My Research Projects</a>
                             </a>
                         </div>
                     </div>

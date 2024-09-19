@@ -17,23 +17,33 @@ layout: compress
 </body>
 <script>
   var navItems = document.getElementsByClassName('navbar-item');
+  var viewportOffset = 0.8;
   var heroes = document.getElementsByClassName('hero');
-  const viewOffset = window.innerHeight * 0.6;
+  var curSection = 0;
 
   window.addEventListener("scroll", function (event) {
     var scroll = this.scrollY;
+    var newSection = curSection;
 
-    for (var i = 0; i < navItems.length; i++) {
-      navItems[i].classList.remove('is-active');
+    if (scroll < heroes[0].offsetHeight * viewportOffset) {
+      newSection = 0;
+    }
+    else for (var i = 1; i < heroes.length; i++) {
+      var height = heroes[i].offsetHeight;
+      if (i === heroes.length - 1) {
+        height += document.getElementById('footer').offsetHeight;
+      }
+      var top = heroes[i].offsetTop;
+      if (scroll + document.documentElement.clientHeight > top + height * viewportOffset) {
+        newSection = i;
+      }
+      else break;
     }
 
-    for (var i = 0; i < heroes.length; i++) {
-        var sectionTop = heroes[i].offsetTop-viewOffset;
-        var sectionBottom = heroes[i].offsetTop + heroes[i].offsetHeight-viewOffset;
-
-        if (scroll >= sectionTop && scroll < sectionBottom) {
-          navItems[i+1].classList.add('is-active');
-      }
+    if (newSection !== curSection) {
+      navItems[curSection + 1].classList.remove('is-active');
+      navItems[newSection + 1].classList.add('is-active');
+      curSection = newSection;
     }
   });
 </script>

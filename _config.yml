@@ -8,8 +8,6 @@ baseurl: /e-Portfolio
 
 # Title of the Site
 title: Zachary Knutson
-# Description of the Site
-description: Hi! I'm a <b>student researcher</b> at the <b>University of Florida</b> studying <b>Astrophysics</b>. <br> <b>THIS PAGE IS IN ACTIVE DEVELOPMENT AND DOES NOT REPRESENT A FINAL PRODUCTION VERSION</b>.
 # URL of Image of the Site
 site-image: ../images/meta.png
 # Keywords of the Site
@@ -39,12 +37,10 @@ author-name: Zachary Knutson
 # URL for the Image of the Author
 author-image: assets/images/author.jpg
 # 60 Words About the Author
-author-about: Student at University of Florida studying Astrophysics
+short-author-about: Student at University of Florida studying Astrophysics and Physics.
 # URL to the Author's Profile (i.e., Github, Twitter, Stackoverflow, etc)
 author-url: https://github.com/zknutson
 
-#location of pdf copy of cv
-cv-pdf: assets/Zachary-Knutson-CV.pdf
 # SASS
 sass:
   sass_dir: _sass

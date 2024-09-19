@@ -2,6 +2,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/jekyll,ruby
 # Edit at https://www.toptal.com/developers/gitignore?templates=jekyll,ruby
 
+### Jetbrains ###
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
+.idea/
 ### Jekyll ###
 _site/
 .sass-cache/
