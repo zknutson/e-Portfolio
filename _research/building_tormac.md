@@ -1,11 +1,10 @@
 ---
-title: card 1
+title: Building TORMAC
 layout: page
 image: https://placehold.co/1200x800
-description: description for card one
+description: description for card two
 tags: 
 - research
-- ARMAC
-
+- TORMAC
 highlight: true
 ---

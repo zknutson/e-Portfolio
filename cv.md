@@ -1,7 +1,7 @@
 ---
 title: CV
 layout: cv
-cv-link: assets/Zachary-Knutson-CV.pdf
+cv-link: /assets/Zachary-Knutson-CV.pdf
 ---
 # Education 
 

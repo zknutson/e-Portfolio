@@ -4,7 +4,7 @@ markdown: kramdown
 # URL of the Site
 url: 'https://zknutson.github.io'
 # Base URL of the Site (i.e., Name of the Repository in which the Site is hosted)
-baseurl: /e-Portfolio
+baseurl: /ePortfolio
 
 # Title of the Site
 title: Zachary Knutson
@@ -16,7 +16,7 @@ site-keywords: portfolio, astronomy, astrophysics, science, zachary, knutson
 favicon-url: 
 
 # URL of the Image of Custom Hero Image (i.e., the image in the background of the very first section of the Homepage)
-heroimage: ../images/hero.jpg
+heroimage: /assets/images/hero.jpg
 
 # Social Media and Contact
 # If you don't want to use any icon, you can leave them blank.
